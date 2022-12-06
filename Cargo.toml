@@ -5,6 +5,6 @@ authors = ["Henry Hoegelow <henry@hoegelow.com>"]
 edition = "2018"
 
 [dependencies]
-alsa = "0.4.3"
+alsa = "0.6.0"
 clap = { version = "3.0.9", features = ["derive"] }
 rand = "0.8.4"
