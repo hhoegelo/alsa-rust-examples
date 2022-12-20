@@ -1,9 +1,5 @@
-FROM rustembedded/cross:armv7-unknown-linux-gnueabihf-0.2.1
+FROM ghcr.io/cross-rs/armv7-unknown-linux-gnueabihf
 
-RUN apt-get update
-RUN dpkg --add-architecture armhf && \
-    apt-get update && \
-    apt-get install --assume-yes libssl-dev:armhf libasound2-dev:armhf pkg-config:armhf alsa:armhf
-RUN apt-get install --assume-yes libasound-dev:armhf
-
-ENV PKG_CONFIG_LIBDIR_armv7_unknown_linux_gnueabihf=/usr/lib/arm-linux-gnueabihf/pkgconfig
+RUN dpkg --add-architecture armhf
+RUN apt-get update --assume-yes 
+RUN apt-get install --assume-yes libasound2-dev:armhf
